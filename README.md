@@ -116,7 +116,7 @@ Start with downloading the videos. Make sure you have the csv and cookies file i
 ```
 cd EndoLap-VQA
 ```
-Check if everything is installed properly, if not run -- `pip install -r requirements.txt`
+Check if everything is installed properly, if not, run -- `pip install -r requirements.txt`
 Once the env is ready, go ahead with the following command:
 ```
 python download_videos.py --csv <path/to/csv file containing video links> --output <target directory> --cookies <cookies.txt>  
