@@ -2,7 +2,7 @@
 
 -------------------------------------------------------------------------------------------------------------
 
-#Data Setup Guide
+# Data Setup Guide
 
 This guide documents the full setup needed to download YouTube video clips between specified start/end timestamps, given a CSV of links and timestamps (e.g. columns like `video_link`, `begin_time_stamp_in_min`, `end_time_stamp_in_min`).
 
