@@ -14,9 +14,13 @@ A CSV with (at minimum) these columns:
 - `video_link` — full YouTube URL
 - `begin_time_stamp_in_min` / `end_time_stamp_in_min` — clip start/end, in minutes (comma-decimal format like `1,30` for 1 min 30 sec is supported and converted automatically)
 
-### 1.1 Install yt-dlp
+### 1.1 Create conda env and Install yt-dlp
 
 ```bash
+conda create -n endolap_vqa python=3.10 -y
+conda activate endolap_vqa
+export PATH="$CONDA_PREFIX/bin:$PATH" ; hash -r; which python
+
 pip install -U yt-dlp
 ```
 
@@ -101,6 +105,25 @@ The last command starts a local server (default: `http://127.0.0.1:4416`) and **
 You should see:
 ```
 Started POT server (v2.0.0) on address [::1]:4416, 127.0.0.1:4416.
+```
+
+## Commands to run:
+
+### Download the videos
+
+Start with downloading the videos. Make sure you have the csv and cookies file in the working directory.
+```
+cd EndoLap-VQA
+python download_videos.py --csv <path to csv file containing video links> --output <target directory> --cookies <cookies.txt>  
+```
+If would like to use directly from chrome (or any other), one can use `--cookies-from-browser <chrome/firefox/etc>` along with the `--username <...>` and `--password <...>`. The preferable method would be using `cookies.txt`.
+
+NOTE: The cookies keep getting expired after some time, so one need to replace once the session is expired. 
+
+### Splitting them into 45-sec chunks
+Once the videos are downloaded, run the following command:
+```
+python split_videos.py 
 ```
 
 
