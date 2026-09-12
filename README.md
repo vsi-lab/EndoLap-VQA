@@ -20,7 +20,8 @@ A CSV with (at minimum) these columns:
 conda create -n endolap_vqa python=3.10 -y
 conda activate endolap_vqa
 export PATH="$CONDA_PREFIX/bin:$PATH" ; hash -r; which python
-
+```
+```
 pip install -U yt-dlp
 ```
 
@@ -114,8 +115,13 @@ Started POT server (v2.0.0) on address [::1]:4416, 127.0.0.1:4416.
 Start with downloading the videos. Make sure you have the csv and cookies file in the working directory.
 ```
 cd EndoLap-VQA
-python download_videos.py --csv <path to csv file containing video links> --output <target directory> --cookies <cookies.txt>  
 ```
+Check if everything is installed properly, if not run -- `pip install -r requirements.txt`
+Once the env is ready, go ahead with the following command:
+```
+python download_videos.py --csv <path/to/csv file containing video links> --output <target directory> --cookies <cookies.txt>  
+```
+
 If would like to use directly from chrome (or any other), one can use `--cookies-from-browser <chrome/firefox/etc>` along with the `--username <...>` and `--password <...>`. The preferable method would be using `cookies.txt`.
 
 NOTE: The cookies keep getting expired after some time, so one need to replace once the session is expired. 
@@ -123,8 +129,9 @@ NOTE: The cookies keep getting expired after some time, so one need to replace o
 ### Splitting them into 45-sec chunks
 Once the videos are downloaded, run the following command:
 ```
-python split_videos.py 
+python split_videos.py --input <path/to/folder containing downloaded videos> --output <path/to/folder to save video_clips>
 ```
+
 
 
 ## Troubleshooting Reference
