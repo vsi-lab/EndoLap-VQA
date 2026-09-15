@@ -127,12 +127,16 @@ If would like to use directly from chrome (or any other), one can use `--cookies
 
 NOTE: The cookies keep getting expired after some time, so one need to replace once the session is expired. 
 
-### Splitting them into 45-sec chunks
+### Splitting them into 45 and 90 sec chunks
 Once the videos are downloaded, run the following command:
 ```
 python split_videos.py --input <path/to/folder containing downloaded videos> --output <path/to/folder to save video_clips>
 ```
 
+### combining the clips into larger 90, 135, 180 sec clips (mainly for future based QA)
+```
+python combine_video_clips.py --chunks <path/to/video clips> --output <output path> --json <path/to/training_testing json files>
+```
 
 
 ## Troubleshooting Reference
