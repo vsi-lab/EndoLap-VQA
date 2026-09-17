@@ -153,6 +153,10 @@ python combine_video_clips.py --chunks <path/to/video clips> --output <output pa
 
 ---
 
+## License
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
 ## Security Notes
 
 - **Never share your cookies.txt contents** with anyone, including in chat logs, screenshots, or version control. It contains live session authentication tokens equivalent to your password.
