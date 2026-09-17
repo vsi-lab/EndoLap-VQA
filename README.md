@@ -1,4 +1,4 @@
-[![CC BY 4.0](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![CC BY 4.0](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
 
 # EndoLap-VQA
 
@@ -157,7 +157,8 @@ python combine_video_clips.py --chunks <path/to/video clips> --output <output pa
 
 ## License
 
-This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+* **Code & Scripts:** [MIT License](LICENSE.md#1-source-code-mit-license)
+* **Data & Documentation:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## Security Notes
 
